@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> <strong>Memotest - {{ nivel | titlecase }}</strong> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="timer">
+    <ion-text color="dark">
+      <h2>Tiempo: {{ timer }} seg</h2>
+    </ion-text>
+  </div>
+
+  <div class="grid-container">
+    <ion-grid>
+        <ion-row *ngFor="let row of grid; let rowIndex = index">
+            <ion-col *ngFor="let item of row; let colIndex = index"
+                [ngStyle]="{ 'flex-basis': nivel === 'dificil' ? '25%' : '50%' }"
+                size="3" size-md="2">
+                
+                <div
+                    class="card"
+                    (click)="flipCard(rowIndex, colIndex)"
+                    [ngClass]="{ 'flipped': item.isFlipped || item.isMatched }">
+                    
+                    <ion-img *ngIf="item.isFlipped || item.isMatched" [src]="item.image"></ion-img>
+                    <div *ngIf="!item.isFlipped && !item.isMatched" class="card-back"></div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-modal [isOpen]="showModal" backdropDismiss="false">
+    <ng-template>
+      <div class="custom-modal">
+        <h2>¡Juego Terminado!</h2>
+        <p>Has completado el juego en {{ timer }} segundos</p>
+        <ion-button expand="full" (click)="closeModal()">Cerrar</ion-button>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <ion-footer>
+    <ion-button size="large" expand="block" fill="outline" color="primary" (click)="resetGame()">
+      Reiniciar
+    </ion-button>
+    <ion-button size="large" expand="block" fill="outline" color="danger" (click)="volver()">
+      Volver
+    </ion-button>
+  </ion-footer>
+</ion-content>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Juego de Memoria</string>
+    <string name="title_activity_main">Juego de Memoria</string>
+    <string name="package_name">io.ionic.juegoMemoria</string>
+    <string name="custom_url_scheme">io.ionic.juegoMemoria</string>
+</resources>

@@ -1,0 +1,70 @@
+* {
+  color: white;
+}
+
+ion-toolbar {
+  --background: #0054e9;
+}
+
+ion-content {
+  --background: #b3f2ff;
+}
+
+ion-title {
+  font-size: 1.5em;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-botones {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-sala {
+  font-size: 1.5em;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 95%;
+  height: 23vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-sala strong {
+  width: 100%;
+  color: black;
+}
+
+.facil {
+  background-color: #9cec5a;
+}
+
+.medio {
+  background-color: #dbf859;
+}
+
+.dificil {
+  background-color: #f8624e;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  // background-color: #0054e9;
+}
+
+.btn-cerrar {
+  width: 40%;
+}

@@ -1,0 +1,78 @@
+* {
+color: black;
+}
+  
+ion-toolbar {
+    --background: #0054e9;
+}
+
+ion-content {
+    --background: #b3f2ff;
+}
+
+ion-title strong {
+    color: white;
+}
+
+ion-title {
+  font-size: 1.5em;
+}
+
+.ranking-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+ion-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background-color: #d1d1d1;
+    font-weight: bold;
+}
+
+ion-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    background-color: rgb(240, 240, 240);
+}
+
+ion-col {
+    text-align: center;
+    padding: 6px;
+}
+
+.table-header ion-col {
+    font-weight: 800;
+} 
+
+.h2-facil {
+    background-color: #9cec5a;
+    padding: 10px 0;
+    font-size: 23px;
+}
+ 
+.h2-medio {
+    background-color: #dbf859;
+    padding: 10px 0;
+    font-size: 23px;
+}
+
+.h2-dificil {
+    background-color: #f8624e;
+    padding: 10px 0;
+    font-size: 23px;
+}
+
+
+ion-footer {
+    box-shadow: none;
+}

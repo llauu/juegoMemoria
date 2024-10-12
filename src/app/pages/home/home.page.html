@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <strong>Juego de Memoria</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Juego de Memoria</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="div-botones">
+      <ion-button color="dark" size="large" expand="block" fill="outline" class="boton-sala facil" (click)="iniciarJuego('facil')"> <strong>FÁCIL</strong> </ion-button>
+      <ion-button color="dark" size="large" expand="block" fill="outline" class="boton-sala medio" (click)="iniciarJuego('medio')"> <strong>MEDIO</strong> </ion-button>
+      <ion-button color="dark" size="large" expand="block" fill="outline" class="boton-sala dificil" (click)="iniciarJuego('dificil')"> <strong>DIFÍCIL</strong> </ion-button>
+    </div>
+
+    <div class="footer">
+      <ion-button color="danger" size="large" expand="block" fill="outline" class="btn-cerrar" (click)="cerrarSesion()">Cerrar sesion</ion-button>
+      <ion-button color="tertiary" size="large" expand="block" fill="outline" class="btn-cerrar" (click)="irRanking()">Ranking</ion-button>
+    </div>
+  </div>
+</ion-content>

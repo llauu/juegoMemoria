@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <strong>Ranking de Memotest</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Ranking Fácil -->
+    <div class="ranking-section">
+      <h2 class="h2-facil">Nivel Fácil</h2>
+      <ion-grid>
+        <ion-row class="table-header">
+          <ion-col>N°</ion-col>
+          <ion-col>Jugador</ion-col>
+          <ion-col>Tiempo</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let player of topEasyPlayers; let i = index">
+          <ion-col>{{ i + 1 }}</ion-col>
+          <ion-col>{{ player.usuario }}</ion-col>
+          <ion-col>{{ player.tiempo }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- Ranking Medio -->
+    <div class="ranking-section">
+      <h2 class="h2-medio">Nivel Medio</h2>
+      <ion-grid>
+        <ion-row class="table-header">
+          <ion-col>N°</ion-col>
+          <ion-col>Jugador</ion-col>
+          <ion-col>Tiempo</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let player of topMediumPlayers; let i = index">
+          <ion-col>{{ i + 1 }}</ion-col>
+          <ion-col>{{ player.usuario }}</ion-col>
+          <ion-col>{{ player.tiempo }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- Ranking Difícil -->
+    <div class="ranking-section">
+      <h2 class="h2-dificil">Nivel Difícil</h2>
+      <ion-grid>
+        <ion-row class="table-header">
+          <ion-col>N°</ion-col>
+          <ion-col>Jugador</ion-col>
+          <ion-col>Tiempo</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let player of topHardPlayers; let i = index">
+          <ion-col>{{ i + 1 }}</ion-col>
+          <ion-col>{{ player.usuario }}</ion-col>
+          <ion-col>{{ player.tiempo }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-grid>
+
+  
+  <ion-footer>
+    <ion-button size="large" expand="block" fill="outline" color="danger" (click)="volver()">
+      Volver
+    </ion-button>
+  </ion-footer>
+</ion-content>
